@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Exercise__4
 {
@@ -10,7 +6,10 @@ namespace Exercise__4
     {
         static void Main(string[] args)
         {
-            
+            string name = "Alvis Pastars";
+            int year = 2000;
+            Console.WriteLine("My name is " + name + " and I was born in " + year + ".");
+            Console.ReadKey();
         }
     }
 }
