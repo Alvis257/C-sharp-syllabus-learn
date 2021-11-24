@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Excersise_9
 {
@@ -36,7 +32,6 @@ namespace Excersise_9
             Console.WriteLine("Your speed in meters/second is " + Math.Round(MetersInSecond, 8));
             Console.WriteLine("Your speed in km/h is " + Math.Round(KmAnHour, 8));
             Console.WriteLine("Your speed in miles/h is " + Math.Round(MilesAnHour, 8));
-   
             Console.ReadKey();
         }
     }
