@@ -6,22 +6,22 @@ namespace Excersise_7
     {
         static void Main(string[] args)
         {
-            string Input;
-            int Count=0;
-            bool IsUperr;
-            IsUperr = true;
+            string input;
+            int count=0;
+            bool isUperr;
+            isUperr = true;
 
             Console.Write("Enter a String: ");
-            Input=Console.ReadLine();
+            input=Console.ReadLine();
 
-            for(int i=0; i<Input.Length; i++)
+            for(int i=0; i<input.Length; i++)
             {
-                if (IsUperr == char.IsUpper(Input[i])) 
+                if (isUperr == char.IsUpper(input[i])) 
                 {
-                    Count++;
+                    count++;
                 }
             }
-            Console.WriteLine("There are " + Count + " Uppercases in this string");
+            Console.WriteLine("There are " + count + " Uppercases in this string");
             Console.ReadKey();
         }
     }
