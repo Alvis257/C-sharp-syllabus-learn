@@ -6,32 +6,33 @@ namespace Excersise_9
     {
         static void Main(string[] args)
         {
-            int Meters, Hours, Minutes, Seconds, SecondsSumm;
-            float KmAnHour, HourSumm, MetersToMilesConvert,
-                MetersInSecond,MilesAnHour, MeterToKmConvert;
+            int meters, hours, minutes, seconds, secondsSumm;
+            float kmAnHour, hourSumm, metersToMilesConvert,
+                metersInSecond,milesAnHour, meterToKmConvert;
 
             Console.Write("Input distance in meters: ");
-            Meters = Convert.ToInt32(Console.ReadLine());
+            meters = Convert.ToInt32(Console.ReadLine());
             Console.Write("Input hour: ");
-            Hours = Convert.ToInt32(Console.ReadLine());
+            hours = Convert.ToInt32(Console.ReadLine());
             Console.Write("Input minutes: ");
-            Minutes = Convert.ToInt32(Console.ReadLine());
+            minutes = Convert.ToInt32(Console.ReadLine());
             Console.Write("Input seconds: ");
-            Seconds = Convert.ToInt32(Console.ReadLine());
+            seconds = Convert.ToInt32(Console.ReadLine());
 
-            SecondsSumm = Seconds + (Minutes * 60) + (Hours * 3600);
-            HourSumm = (float)Hours + ((float)Minutes / 60) + ((float)Seconds / 3600);
-            MeterToKmConvert = (float)Meters / 1000;
-            MetersToMilesConvert = (float)Meters / 1609;
+            secondsSumm = seconds + (minutes * 60) + (hours * 3600);
+            hourSumm = (float)hours + ((float)minutes / 60) + ((float)seconds / 3600);
+            meterToKmConvert = (float)meters / 1000;
+            metersToMilesConvert = (float)meters / 1609;
 
-            KmAnHour = (float)MeterToKmConvert / HourSumm;
-            MilesAnHour = MetersToMilesConvert / HourSumm;
-            MetersInSecond = (float)Meters / SecondsSumm;
+            kmAnHour = (float)meterToKmConvert / hourSumm;
+            milesAnHour = metersToMilesConvert / hourSumm;
+            metersInSecond = (float)meters / secondsSumm;
 
             Console.WriteLine("Output:");
-            Console.WriteLine("Your speed in meters/second is " + Math.Round(MetersInSecond, 8));
-            Console.WriteLine("Your speed in km/h is " + Math.Round(KmAnHour, 8));
-            Console.WriteLine("Your speed in miles/h is " + Math.Round(MilesAnHour, 8));
+            Console.WriteLine("Your speed in meters/second is " 
+                              + Math.Round(metersInSecond, 8));
+            Console.WriteLine("Your speed in km/h is " + Math.Round(kmAnHour, 8));
+            Console.WriteLine("Your speed in miles/h is " + Math.Round(milesAnHour, 8));
             Console.ReadKey();
         }
     }
