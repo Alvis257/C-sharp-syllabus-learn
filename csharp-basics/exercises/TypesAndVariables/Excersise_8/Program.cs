@@ -6,17 +6,17 @@ namespace Excersise_8
     {
         static void Main(string[] args)
         {
-            int Minutes,Days, Years, MinutesInAYear,RemeiningMinutes, MinutesInADay;
-            MinutesInAYear = 525600;
-            MinutesInADay = 1440;
+            int minutes,days, years, minutesInAYear,remeiningMinutes, minutesInADay;
+            minutesInAYear = 525600;
+            minutesInADay = 1440;
 
             Console.Write("Enter minutes: ");
-            Minutes = Convert.ToInt32(Console.ReadLine());
-            Years = Minutes / MinutesInAYear;
-            RemeiningMinutes = Minutes % MinutesInAYear;
-            Days = RemeiningMinutes / MinutesInADay;
+            minutes = Convert.ToInt32(Console.ReadLine());
+            years = minutes / minutesInAYear;
+            remeiningMinutes = minutes % minutesInAYear;
+            days = remeiningMinutes / minutesInADay;
 
-            Console.Write("This "+Minutes+" minutes are "+Years+" Years and "+Days+" Days");
+            Console.Write("This "+minutes+" minutes are "+years+" Years and "+days+" Days");
             Console.ReadKey();
         }
     }
