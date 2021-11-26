@@ -8,10 +8,12 @@ namespace Exercise_1
         {
             int number1, number2;
             bool answer = false;
+
             Console.Write("Enter a number: ");
             number1 = Convert.ToInt32(Console.ReadLine());
             Console.Write("Enter a number: ");
             number2 = Convert.ToInt32(Console.ReadLine());
+
             if (number1 == 15 || number2 == 15)
             {
                 answer = true;

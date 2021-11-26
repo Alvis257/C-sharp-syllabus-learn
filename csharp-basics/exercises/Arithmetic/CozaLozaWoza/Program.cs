@@ -45,12 +45,15 @@ namespace CozaLozaWoza
                     else Console.Write(i);
 
                     Console.Write(" ");
+
                     if (i == count)
                     {
                         break;
                     }
+
                     i++;
                 }
+
                 Console.WriteLine();
             }
 

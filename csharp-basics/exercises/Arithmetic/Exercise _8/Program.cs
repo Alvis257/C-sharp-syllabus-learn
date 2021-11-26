@@ -9,18 +9,19 @@ namespace Exercise__8
             if (employeeHour > 60)
             {
                 Console.WriteLine("Eror employee work hours are higher then 60");
-                System.Environment.Exit(0);
+                Environment.Exit(0);
                 return 0;
             }
             else if (employeeBasePay < 8.00)
             {
                 Console.WriteLine("Eror employee base pay is smaller then $8.00");
-                System.Environment.Exit(0);
+                Environment.Exit(0);
                 return 0;
             }
             else
             {
                 float cauculatePay, newHours;
+
                 if (employeeHour <= 40)
                 {
                     cauculatePay = employeeHour * employeeBasePay;
@@ -33,21 +34,24 @@ namespace Exercise__8
                     cauculatePay = cauculatePay + newHours * (employeeBasePay * 1.5f);
                     return cauculatePay;
                 }
-
-                throw new ArgumentException("Erorr somthing went wrong");
+                else
+                {
+                    Console.WriteLine("Erorr somthing went wrong");
+                    return 0;
+                }
             }
         }
 
         static void Main(string[] args)
         {
             float employeeHours, employeeBasePay, employeeBasePayWeek;
+
             Console.Write("Enter Employee Hours: ");
             employeeHours = Convert.ToSingle(Console.ReadLine());
             Console.Write("Enter Employee Base Pay: ");
             employeeBasePay = Convert.ToSingle(Console.ReadLine());
-
             employeeBasePayWeek = CauculatePayEmployee(employeeHours, employeeBasePay);
-            Console.WriteLine("Emplyee has worked " + employeeHours + 
+            Console.WriteLine("Emplyee has worked " + employeeHours +
                               " hours this week, hour base pay is "
                               + employeeBasePay + ". Employees pay for this week is " +
                               Math.Round(employeeBasePayWeek, 2));

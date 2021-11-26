@@ -8,8 +8,10 @@ namespace Product1ToN
         {
             int number, sumOfFactorial;
             sumOfFactorial = 1;
+
             Console.Write("Enter a number : ");
             number = Convert.ToInt32(Console.ReadLine());
+
             for (int i = 1; i <= number; i++)
             {
                 sumOfFactorial = sumOfFactorial * i;

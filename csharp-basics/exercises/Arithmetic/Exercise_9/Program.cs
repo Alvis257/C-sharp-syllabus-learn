@@ -6,10 +6,16 @@ namespace Exercise_9
     {
         static void Main(string[] args)
         {
-            double kg, m, kgConvertToPounds, mConvertToInches,
-                bMI, inchratio, poundratio;
+            double kg,
+                m,
+                kgConvertToPounds,
+                mConvertToInches,
+                bMI,
+                inchratio,
+                poundratio;
             inchratio = 0.45359237;
             poundratio = 0.0254;
+
             Console.Write("Enter youre weight in kg: ");
             kg = Convert.ToDouble(Console.ReadLine());
             Console.Write("Enter youre height in m: ");
@@ -29,8 +35,9 @@ namespace Exercise_9
                 Console.WriteLine("Youre BMI is " + Math.Round(bMI, 2)
                                                   + " It is considered to be overweight ");
             }
-            else Console.WriteLine("Youre BMI is " + Math.Round(bMI, 2) 
-                                                   + " It is considered to be optimal ");
+            else
+                Console.WriteLine("Youre BMI is " + Math.Round(bMI, 2)
+                                                  + " It is considered to be optimal ");
 
             Console.ReadKey();
         }
