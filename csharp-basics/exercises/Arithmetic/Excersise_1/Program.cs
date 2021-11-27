@@ -19,12 +19,7 @@ namespace Exercise_1
                 answer = true;
                 Console.WriteLine(answer);
             }
-            else if (number1 + number2 == 15)
-            {
-                answer = true;
-                Console.WriteLine(answer);
-            }
-            else if (number1 - number2 == 15)
+            else if (number1 + number2 == 15 || number1 - number2 == 15)
             {
                 answer = true;
                 Console.WriteLine(answer);
