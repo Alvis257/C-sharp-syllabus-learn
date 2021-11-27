@@ -26,7 +26,7 @@ namespace Exercise_5
                 Console.WriteLine("Sorry, you are too high. " +
                                   " I was thinking of " + randomNumber);
             }
-            else if (userInput < randomNumber)
+            else
             {
                 Console.WriteLine("Sorry, you are too low. " +
                                   " I was thinking of " + randomNumber);
