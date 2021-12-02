@@ -82,18 +82,18 @@ namespace Hangman
             if (win == true)
             {
                 Console.WriteLine($"You have guessed the word {string.Join(" ",wordToGuess)}");
-                reset();
+                Reset();
             }
             else
             {
                 Console.WriteLine($"You haven't guessed the word is  {string.Join(" ",wordToGuess)}");
-                reset();
+                Reset();
             }
 
             Console.ReadKey();
         }
 
-        private static void reset()
+        private static void Reset()
         {
             Console.WriteLine("Do you want to play agein y/n");
             char input = Console.ReadKey().KeyChar;
@@ -109,7 +109,7 @@ namespace Hangman
                     break;
                 default:
                     Console.WriteLine("Wrong input");
-                    reset();
+                    Reset();
                     break;
             }
         }
