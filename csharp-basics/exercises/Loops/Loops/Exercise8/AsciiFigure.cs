@@ -13,7 +13,6 @@ namespace AsciiFigure
 
             for (int i = 0; i < index; i++)
             {
-
                 for (int j = i; j < index - 1; j++)
                 {
                     Console.Write("////");

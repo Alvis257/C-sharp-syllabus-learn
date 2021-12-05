@@ -12,7 +12,7 @@ namespace Exercise7
             Console.WriteLine("Welcome to Piglet!");
             Console.WriteLine("Do you want to play?y/n");
 
-            while (answer == 'y')
+            while (answer != 'n')
             {
                 answer = Console.ReadKey().KeyChar;
 
@@ -44,7 +44,6 @@ namespace Exercise7
                 {
                     Console.WriteLine();
                     Console.WriteLine("Wrong input");
-                    answer = 'y';
                     Console.WriteLine("Roll again? y/n");
                 }
             }
