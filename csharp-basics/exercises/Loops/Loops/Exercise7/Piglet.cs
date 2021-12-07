@@ -7,13 +7,9 @@ namespace Exercise7
         private static int sum = 0;
         private static Random rnd = new Random();
 
-        public Piglet()
-        {
-        }
-
         public static int Count(bool answer)
         {
-            if (answer == true)
+            if (answer)
             {
                 int rndNumber = rnd.Next(1, 7);
 

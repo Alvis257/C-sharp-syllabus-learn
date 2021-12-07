@@ -24,8 +24,7 @@ namespace Exercise7
                     if (digit == 1)
                     {
                         Console.WriteLine($"You rolled a {digit}!");
-                        digit = Piglet.Count(false);
-                        Console.WriteLine($"You got {digit} points");
+                        Console.WriteLine($"You got 0 points");
                         answer = 'n';
                     }
                     else
