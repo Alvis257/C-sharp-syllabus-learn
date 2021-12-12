@@ -4,6 +4,9 @@ namespace Exercise1
 {
     class Product
     {
+        private string[] _name;
+        private double[] _priceAtStart;
+        private int[] _amountAtStart;
 
         public Product(string[] name, double[] priceAtStart, int[] amountAtStart)
         {
@@ -11,10 +14,6 @@ namespace Exercise1
             _priceAtStart = priceAtStart;
             _amountAtStart = amountAtStart;
         }
-
-        public string[] _name { get; }
-        public double[] _priceAtStart { get; set; }
-        public int[] _amountAtStart { get; set; }
 
         public void PrintProduct()
         {

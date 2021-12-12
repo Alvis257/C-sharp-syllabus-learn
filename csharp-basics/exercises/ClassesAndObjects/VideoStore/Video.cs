@@ -7,13 +7,13 @@ namespace VideoStore
     {
         private string _title;
         private bool _checkOutIn;
-        private List<double> _raiting;
+        private List<double> _rating;
 
         public Video(string title)
         {
             _title = title;
             _checkOutIn = true;
-            _raiting = new List<double>();
+            _rating = new List<double>();
         }
 
         public bool BeingCheckedOut()
@@ -28,12 +28,12 @@ namespace VideoStore
 
         public void ReceivingRating(double rating)
         {
-            _raiting.Add(rating);
+            _rating.Add(rating);
         }
 
         public double AverageRating()
         {
-            return _raiting.Sum() / _raiting.Count;
+            return _rating.Sum() / _rating.Count;
         }
 
         public bool Available()

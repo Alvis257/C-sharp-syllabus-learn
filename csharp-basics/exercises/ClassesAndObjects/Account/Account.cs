@@ -2,8 +2,8 @@
 {
     class Account
     {
-        private string _name { get; set; }
-        private double _money { get; set; }
+        private string _name;
+        private double _money;
 
         public Account(string name, double balance)
         {

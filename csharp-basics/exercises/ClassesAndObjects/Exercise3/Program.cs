@@ -15,7 +15,7 @@ namespace Exercise3
             {
                 if (!fuel._full)
                 {
-                    fuel.addFuel();
+                    fuel.AddFuel();
                 }
             }
 
@@ -38,7 +38,7 @@ namespace Exercise3
                     {
                         if (!fuel._full)
                         {
-                            fuel.addFuel();
+                            fuel.AddFuel();
                             Console.WriteLine($"Fuel tank:" +
                                               $" {fuel._currentLiters}");
                         }

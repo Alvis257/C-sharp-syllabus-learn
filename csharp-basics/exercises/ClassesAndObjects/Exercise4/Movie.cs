@@ -1,31 +1,28 @@
-﻿using System;
-
-namespace Exercise4
+﻿namespace Exercise4
 {
     class Movie
     {
-        public Movie(string title, string studio, string raiting)
+        private string _title;
+        private string _studio;
+        public string _rating { get; private set; }
+
+        public Movie(string title, string studio, string rating)
         {
             _title = title;
             _studio = studio;
-            _raiting = raiting;
+            _rating = rating;
         }
 
         public Movie(string title, string studio)
         {
             _title = title;
             _studio = studio;
-            _raiting = "PG";
+            _rating = "PG";
         }
 
         public string Display()
         {
-            return $"{_title} {_studio} {_raiting}";
+            return $"{_title} {_studio} {_rating}";
         }
-
-        private string _title { get; set; }
-        private string _studio { get; set; }
-        public string _raiting { get; private set; }
-
     }
 }

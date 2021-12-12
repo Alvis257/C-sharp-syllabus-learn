@@ -4,11 +4,11 @@ namespace Exercise3
 {
     class FuelGauge
     {
-        public double _currentLiters { get; set; }
+        public double _currentLiters;
         public bool _full = false;
         public bool _empty = false;
 
-        public void addFuel()
+        public void AddFuel()
         {
             if (_currentLiters + 1 > 70)
             {
@@ -17,7 +17,6 @@ namespace Exercise3
             }
             else
             {
-                _full = false;
                 _currentLiters += 1;
             }
         }
@@ -32,7 +31,6 @@ namespace Exercise3
             }
             else
             {
-                _empty = false;
                 _currentLiters -= 1;
             }
         }

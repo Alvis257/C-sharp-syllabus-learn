@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Exercise4
 {
@@ -36,7 +32,7 @@ namespace Exercise4
             var filter = new List<Movie>();
             foreach (var movie in movies)
             {
-                if (movie._raiting == "PG")
+                if (movie._rating == "PG")
                 {
                     filter.Add(movie);
                 }
