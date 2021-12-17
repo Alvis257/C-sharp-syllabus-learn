@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ListExercise11
 {
@@ -10,19 +7,43 @@ namespace ListExercise11
     {
         static void Main(string[] args)
         {
-            //TODO: Create an List with string elements
+            var digets = new List<string>();
 
-            //TODO: Add 10 values to list
+            digets.Add("Red");
+            digets.Add("Green");
+            digets.Add("Fooo");
+            digets.Add("Garage");
+            digets.Add("Pivciks");
+            digets.Add("Foobar");
+            digets.Add("Game");
+            digets.Add("Hello World");
+            digets.Add("Hapa");
+            digets.Add("Aha");
 
-            //TODO: Add new value at 5th position
+            Console.WriteLine(string.Join(",", digets));
+            digets.Insert(4, "Fool");
+            Console.WriteLine(string.Join(",", digets));
 
-            //TODO: Change value at last position (Calculate last position programmatically)
+            for (int i = 0; i <= digets.Count; i++)
+            {
+                if (i == digets.Count - 1)
+                {
+                    digets.RemoveAt(i);
+                    digets.Insert(i, "AHAHA");
+                }
+            }
 
-            //TODO: Sort your list in alphabetical order
+            Console.WriteLine(string.Join(",", digets));
+            digets.Sort();
+            Console.WriteLine(string.Join(",", digets));
+            Console.WriteLine(digets.Contains("Foobar") ? "Contains Foobar" : "Dosn't Contain Foobar");
 
-            //TODO: Check if your list contains "Foobar" element
+            for (int i = 0; i < digets.Count; i++)
+            {
+                Console.Write(digets[i] + ",");
+            }
 
-            //TODO: Print each element of list using loop
+            Console.ReadKey();
         }
     }
 }

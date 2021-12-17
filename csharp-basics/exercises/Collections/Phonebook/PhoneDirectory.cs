@@ -1,64 +1,57 @@
 using System;
+using System.Collections.Generic;
 
 namespace PhoneBook
 {
     public class PhoneDirectory
     {
-        private PhoneEntry[] _data;
-        private int _dataCount;
+        private Dictionary<string, string> _data = new Dictionary<string, string>();
+        private string _name;
+        private string _number;
 
-        public PhoneDirectory() {
-            _data = new PhoneEntry[1];
-            _dataCount = 0;
-        }
-
-        private int Find(string name) {
-            for (var i = 0; i < _dataCount; i++) 
+        public string GetName(string number)
+        {
+            if (_data.ContainsValue(number))
             {
-                if (_data[i].name.Equals(name)) 
+                foreach (var name in _data.Keys)
                 {
-                    return i;
+                    if (_data[name] == number)
+                    {
+                        return name;
+                    }
                 }
             }
 
-            return -1;
+            return null;
         }
 
-        public string GetNumber(string name) 
+        public string GetNumber(string name)
         {
-            var position = Find(name);
-            if (position == -1) 
+            if (_data.ContainsKey(name))
             {
-                return null;
-            } 
-            else 
-            {
-                return _data[position].number;
+                return _data[name];
             }
+
+            return null;
         }
 
-        public void PutNumber(string name, string number) 
+        public void PutNumber(string name, string number)
         {
-            if (name == null || number == null) 
+            if (name == null || number == null)
             {
                 throw new Exception("name and number cannot be null");
             }
 
-            var i = Find(name);
-            if (i >= 0) 
-            {
-                _data[i].number = number;
-            }
-            else 
-            {
-                if (_dataCount == _data.Length) 
-                {
-                    Array.Resize(ref _data, (2 * _data.Length));
-                }
+            _data.Add(name, number);
+        }
 
-                var newEntry = new PhoneEntry {name = name, number = number}; // Create a new pair.
-                _data[_dataCount] = newEntry;   // Add the new pair to the array.
-                _dataCount++;
+        public void DisplayDictionary()
+        {
+            Console.WriteLine("Phones numbers:");
+
+            foreach (var phoneBook in _data)
+            {
+                Console.WriteLine(phoneBook);
             }
         }
     }
