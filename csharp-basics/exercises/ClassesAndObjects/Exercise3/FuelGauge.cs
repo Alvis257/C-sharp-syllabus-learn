@@ -4,9 +4,9 @@ namespace Exercise3
 {
     class FuelGauge
     {
-        public double _currentLiters;
-        public bool _full = false;
-        public bool _empty = false;
+        private double _currentLiters;
+        private bool _full = false;
+        private bool _empty = false;
 
         public void AddFuel()
         {
@@ -19,6 +19,27 @@ namespace Exercise3
             {
                 _currentLiters += 1;
             }
+        }
+
+        public bool IsFullOrEmpty()
+        {
+            if (_full || _empty)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public void ResetBoolValue()
+        {
+            _full = false;
+            _empty = false;
+        }
+
+        public double DisplayLiters()
+        {
+            return _currentLiters;
         }
 
         public void burningFuel()

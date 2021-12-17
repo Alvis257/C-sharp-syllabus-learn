@@ -13,43 +13,40 @@ namespace Exercise3
 
             for (int i = 0; i < litters; i++)
             {
-                if (!fuel._full)
+                if (fuel.IsFullOrEmpty())
                 {
                     fuel.AddFuel();
                 }
             }
 
-            Console.WriteLine($"Full tank: {fuel._currentLiters}");
+            Console.WriteLine($"Fuel Tank: {fuel.DisplayLiters()}");
 
             for (int j = 0; j <= km; j++)
             {
-                if (!fuel._empty)
+                if (fuel.IsFullOrEmpty())
                 {
                     odometer.Milgae();
-                    Console.WriteLine($"Millage: {odometer._currentmilage} " +
-                                      $"Fuel tank: {fuel._currentLiters}");
+                    odometer.DisplayAll();
                 }
                 else
                 {
+                    fuel.ResetBoolValue();
                     Console.WriteLine("Enter litters: ");
                     litters = Convert.ToDouble(Console.ReadLine());
 
                     for (int i = 0; i < litters; i++)
                     {
-                        if (!fuel._full)
+                        if (fuel.IsFullOrEmpty())
                         {
                             fuel.AddFuel();
-                            Console.WriteLine($"Fuel tank:" +
-                                              $" {fuel._currentLiters}");
+                            Console.WriteLine($"Fuel Tank: {fuel.DisplayLiters()}");
                         }
                     }
 
-                    fuel._full = false;
-                    fuel._empty = false;
+                    fuel.ResetBoolValue();
                     Console.ReadLine();
                 }
             }
-
             Console.ReadLine();
         }
     }
