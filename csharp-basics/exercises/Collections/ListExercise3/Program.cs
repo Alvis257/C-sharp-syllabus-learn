@@ -15,18 +15,8 @@ namespace ListExercise3
             colors.Add("Black");
             Console.WriteLine(string.Join(",", colors));
             colors.Insert(0,"Yellow");
-
-            for (int i = 0; i < colors.Count; i++)
-            {
-                if (i == 1)
-                {
-                    colors.Insert(i,"Purple");
-                }
-                else if (i == 3)
-                {
-                    colors.Insert(i,"Blue");
-                }
-            }
+            colors.Insert(1,"Blue");
+            colors.Insert(3, "Blue");
 
             Console.WriteLine(string.Join(",", colors));
             Console.ReadKey();

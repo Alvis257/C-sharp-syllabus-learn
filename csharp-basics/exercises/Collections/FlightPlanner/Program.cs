@@ -11,13 +11,16 @@ namespace FlightPlanner
         private static void Main(string[] args)
         {
             var citysList = new List<string>(File.ReadAllLines(Path));
-            var citysFrom = new HashSet<string>();
+            var citysFrom = new List<string>();
+            var citysTo = new List<string>();
             var travelList = new HashSet<string>();
 
             foreach (var citys in citysList)
             {
                 var city = citys.Split('-');
                 citysFrom.Add(city[0]);
+                city[1] = city[1].Replace(">", "");
+                citysTo.Add(city[1]);
             }
 
             Console.WriteLine("What would you like to do:");
@@ -38,18 +41,17 @@ namespace FlightPlanner
                     Console.WriteLine("select a city from which you would like to start: ");
                     var input = Console.ReadLine();
                     var startCity = String.Empty;
-
+                    var index = 0;
                     foreach (var citys in citysList)
                     {
-                        var city = citys.Split('-');
-                        city[0] = city[0].Replace(">", "");
-
-                        if (city[0].Contains(input))
+                        if (citysFrom[index].Contains(input))
                         {
-                            startCity = city[0].Trim();
-                            travelList.Add(city[0]);
+                            startCity = citysFrom[index].Trim();
+                            travelList.Add(citysFrom[index]);
                             Console.WriteLine(citys);
                         }
+
+                        index++;
                     }
 
                     string currentCity = "";
@@ -71,29 +73,31 @@ namespace FlightPlanner
                             if (currentCity == "")
                             {
                                 string temp = input;
+                                index = 0;
 
                                 foreach (var citys in citysList)
                                 {
-                                    var city = citys.Split('-');
-
-                                    if (city[0].Contains(temp))
+                                    if (citysFrom[index].Contains(temp))
                                     {
                                         Console.WriteLine(citys);
                                     }
+
+                                    index++;
                                 }
 
                                 Console.WriteLine();
                             }
                             else
                             {
+                                index = 0;
                                 foreach (var citys in citysList)
                                 {
-                                    var city = citys.Split('-');
-
-                                    if (city[0].Contains(currentCity))
+                                    if (citysFrom[index].Contains(currentCity))
                                     {
                                         Console.WriteLine(citys);
                                     }
+
+                                    index++;
                                 }
 
                                 Console.WriteLine();
@@ -104,16 +108,12 @@ namespace FlightPlanner
                             Console.WriteLine();
                             Console.WriteLine("Select a city you want to go to:");
                             input = Console.ReadLine();
-
-                            foreach (var citys in citysList)
+                            foreach (var city in citysTo)
                             {
-                                var city = citys.Split('-');
-                                city[1] = city[1].Replace(">", "");
-
-                                if (city[1].Contains(input))
+                                if (city.Contains(input))
                                 {
-                                    currentCity = city[1].Trim();
-                                    travelList.Add(city[1]);
+                                    currentCity = city.Trim();
+                                    travelList.Add(city);
                                 }
                             }
 
