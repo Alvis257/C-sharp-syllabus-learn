@@ -21,7 +21,7 @@ namespace Exercise3
             }
         }
 
-        public bool IsFullOrEmpty()
+        public bool IsFull()
         {
             if (_full || _empty)
             {

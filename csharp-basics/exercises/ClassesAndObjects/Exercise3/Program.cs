@@ -13,7 +13,7 @@ namespace Exercise3
 
             for (int i = 0; i < litters; i++)
             {
-                if (fuel.IsFullOrEmpty())
+                if (fuel.IsFull())
                 {
                     fuel.AddFuel();
                 }
@@ -23,7 +23,7 @@ namespace Exercise3
 
             for (int j = 0; j <= km; j++)
             {
-                if (fuel.IsFullOrEmpty())
+                if (fuel.IsFull())
                 {
                     odometer.Milgae();
                     odometer.DisplayAll();
@@ -36,7 +36,7 @@ namespace Exercise3
 
                     for (int i = 0; i < litters; i++)
                     {
-                        if (fuel.IsFullOrEmpty())
+                        if (fuel.IsFull())
                         {
                             fuel.AddFuel();
                             Console.WriteLine($"Fuel Tank: {fuel.DisplayLiters()}");
