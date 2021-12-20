@@ -5,19 +5,27 @@
         private string _name;
         private double _money;
 
-        public Account(string v1, double v2)
+        public Account(string name, double balance)
         {
-            
+            _name = name;
+            _money = balance;
         }
 
-        public double Withdrawal(double i)
+        public static void Transfer(Account from, Account to, double howMuch)
         {
-            return i;
+            from.Withdrawal(howMuch);
+            to.Deposit(howMuch);
         }
 
-        public void Deposit(double i)
+        private double Withdrawal(double i)
         {
-            
+            _money -= i;
+            return _money;
+        }
+
+        private void Deposit(double i)
+        {
+            _money += i;
         }
 
         public double Balance()
