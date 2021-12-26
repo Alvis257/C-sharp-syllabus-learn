@@ -53,24 +53,10 @@ namespace Hierarchy
                 switch (input[0].ToLower())
                 {
                     case "vegetable":
-                        if (animalList[i].FoodType(foodType))
-                        {
-                            food = new Vegetable(int.Parse(input[1]));
-                            animalList[i].Eat(food);
-                            Console.WriteLine(animalList[i].ToString());
-                        }
-                        else Console.WriteLine($"{animalList[i].GetSetAnimalName} are not eating that type of food!");
-
+                        Console.WriteLine(Food(animalList[i], foodType, food, input[1]));
                         break;
                     case "meat":
-                        if (animalList[i].FoodType(foodType))
-                        {
-                            food = new Meat(int.Parse(input[1]));
-                            animalList[i].Eat(food);
-                            Console.WriteLine(animalList[i].ToString());
-                        }
-                        else Console.WriteLine($"{animalList[i].GetSetAnimalName} are not eating that type of food!");
-
+                        Console.WriteLine(Food(animalList[i], foodType, food, input[1]));
                         break;
                     default:
                         Console.WriteLine("Incorrect input");
@@ -90,6 +76,25 @@ namespace Hierarchy
             }
 
             Console.ReadKey();
+        }
+
+        public static string Food(Animal animal, string foodType, Food food, string input)
+        {
+
+            if (animal.FoodType(foodType) && foodType.ToLower() == "vegetable")
+            {
+                food = new Vegetable(int.Parse(input));
+                animal.Eat(food);
+                return animal.ToString();
+            }
+            else if (animal.FoodType(foodType) && foodType.ToLower() == "meat")
+            {
+                food = new Meat(int.Parse(input));
+                animal.Eat(food);
+                return animal.ToString();
+            }
+
+            return $"{animal.GetSetAnimalName} are not eating that type of food!";
         }
     }
 }

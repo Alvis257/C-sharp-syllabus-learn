@@ -24,8 +24,7 @@ namespace DragRace
                     {
                         car.StartEngine();
                     }
-
-                    if (i == 3)
+                    else if (i == 3)
                     {
                         if (car is Boost boost)
                         {

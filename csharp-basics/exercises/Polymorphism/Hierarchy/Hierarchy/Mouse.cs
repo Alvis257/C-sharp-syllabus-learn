@@ -21,12 +21,7 @@
 
         public override bool FoodType(string foodType)
         {
-            if (foodType == "Vegetable")
-            {
-                return true;
-            }
-
-            return false;
+            return foodType == "Vegetable";
         }
 
     }

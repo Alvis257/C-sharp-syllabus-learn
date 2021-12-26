@@ -24,12 +24,8 @@
 
         public override bool FoodType(string foodType)
         {
-            if (foodType == "Vegetable" || foodType == "Meat")
-            {
-                return true;
-            }
+            return foodType == "Vegetable" || foodType == "Meat";
 
-            return false;
         }
 
         public override string ToString()
