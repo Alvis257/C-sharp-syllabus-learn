@@ -1,0 +1,15 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5f443474_002D32f0_002D4aa2_002D9369_002D65e6b99c74bf/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="UnitTest1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;MSTest::33BED828-9CF3-4EEA-B4BC-5AEC14E90D9E::.NETFramework,Version=v4.7.2::Hirarchy.Test.CatTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::33BED828-9CF3-4EEA-B4BC-5AEC14E90D9E::.NETFramework,Version=v4.7.2::Hirarchy.Test.MouseTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::33BED828-9CF3-4EEA-B4BC-5AEC14E90D9E::.NETFramework,Version=v4.7.2::Hirarchy.Test.TigerTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::33BED828-9CF3-4EEA-B4BC-5AEC14E90D9E::.NETFramework,Version=v4.7.2::Hirarchy.Test.VegetableTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::33BED828-9CF3-4EEA-B4BC-5AEC14E90D9E::.NETFramework,Version=v4.7.2::Hirarchy.Test.MeatTest&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=def4ee2a_002D98b6_002D41e6_002D89de_002D794c3aebae9a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Tiger_FoodType_Should_Be_True_When_Meat_False_When_Vegetable" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;MSTest::33BED828-9CF3-4EEA-B4BC-5AEC14E90D9E::.NETFramework,Version=v4.7.2::Hirarchy.Test.TigerTest.Tiger_FoodType_Should_Be_True_When_Meat_False_When_Vegetable&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
