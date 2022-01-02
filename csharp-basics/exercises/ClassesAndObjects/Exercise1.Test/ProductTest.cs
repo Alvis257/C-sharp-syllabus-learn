@@ -6,7 +6,7 @@ namespace Exercise1.Test
     public class ProductTest
     {
         [TestMethod]
-        public void Test_Product_NewValueInput_Through_PrintProduct_Should_Return_Products()
+        public void Product_NewValueInput_Through_PrintProduct_Should_Return_Products()
         {
             //Arrange
             string[] name = new string[] {"Jolo", "Lol"};

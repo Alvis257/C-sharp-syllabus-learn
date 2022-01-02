@@ -8,7 +8,7 @@ namespace Exercise6_Test
     public class Exercise6Tests
     {
         [TestMethod]
-        public void Array_And_CopyArray_Are_Equal_Before_Change()
+        public void PutInArrayRandomNumbers_ValidArray_Equal_CopiedArray()
         {
             //Arrange
             int[] array = new int[20];
@@ -19,8 +19,7 @@ namespace Exercise6_Test
             ArrayChange.PutInArrayRandomNumbers(random, array, copyArray);
 
             //Assert
-            for (int i = 0; i < array.Length; i++)
-                Assert.AreEqual(array[i], copyArray[i]);
+            CollectionAssert.AreEqual(array, copyArray);
             
         }
 
@@ -41,7 +40,7 @@ namespace Exercise6_Test
         }
 
         [TestMethod]
-        public void Array_And_CopyArray_Length_Equal_Length()
+        public void PutInArrayRandomNumbers_ValidArray_ArrayIsCopied()
         {
             //Arrange
             int[] array = new int[20];
@@ -57,7 +56,7 @@ namespace Exercise6_Test
         }
 
         [TestMethod]
-        public void Array_And_CopyArray_Are_Not_Equal_After_Change()
+        public void ChangeArray_Array_And_CopyArray_Are_Not_Equal_After_Change()
         {
             //Arrange
             int[] array = new int[20];

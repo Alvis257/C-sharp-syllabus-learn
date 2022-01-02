@@ -23,7 +23,7 @@ namespace Exercise6_Test
         }
 
         [TestMethod]
-        public void CopyArray_Change_Last_Index()
+        public void ChangeArray_CopyArray_Change_Last_Index()
         {
             //Arrange
             int[] array = new int[20];
@@ -39,7 +39,7 @@ namespace Exercise6_Test
         }
 
         [TestMethod]
-        public void Array_And_CopyArray_Length_Equal_Length()
+        public void PutInArrayRandomNumbers_ValidArray_ArrayIsCopied()
         {
             //Arrange
             int[] array = new int[20];
@@ -55,7 +55,7 @@ namespace Exercise6_Test
         }
 
         [TestMethod]
-        public void Array_And_CopyArray_Are_Not_Equal_After_Change()
+        public void ChangeArray_ValidArray_CopyArray_Not_Equal_After_Change()
         {
             //Arrange
             int[] array = new int[20];

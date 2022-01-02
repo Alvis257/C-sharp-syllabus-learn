@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace PhoneBook
 {
-    public class PhoneDirectory
+    public class PhoneDictionary
     {
         private Dictionary<string, string> _data = new Dictionary<string, string>();
         private string _name;

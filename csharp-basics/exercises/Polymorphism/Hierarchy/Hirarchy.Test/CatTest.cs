@@ -6,7 +6,6 @@ namespace Hirarchy.Test
     [TestClass]
     public class CatTest
     {
-        //Arrange
         private Cat _target = new Cat("Cat", "Gray", 1.1, 0, "Home", "Persian");
 
         [TestMethod]

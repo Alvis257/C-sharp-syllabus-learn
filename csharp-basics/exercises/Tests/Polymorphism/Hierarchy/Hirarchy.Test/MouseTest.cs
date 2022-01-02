@@ -6,7 +6,6 @@ namespace Hirarchy.Test
     [TestClass]
     public class MouseTest
     {
-        //Arrange
         private Mouse _target = new Mouse("Mouse", "Gray", 0.3, "Box", 0);
 
         [TestMethod]

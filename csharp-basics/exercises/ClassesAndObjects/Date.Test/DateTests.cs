@@ -6,7 +6,7 @@ namespace Date.Test
     public class DateTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void DisplayDate_Should_Display_Month_Day_Year()
         {
             //Arrange
             int day = 01;

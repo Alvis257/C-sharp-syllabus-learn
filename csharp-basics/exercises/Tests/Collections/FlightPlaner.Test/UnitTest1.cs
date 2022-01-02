@@ -7,7 +7,6 @@ namespace FlightPlanner.Test
     [TestClass]
     public class UnitTest1
     {
-        //Arrange
         private Planer _target = new Planer();
 
         private List<string> cityList = new List<string>

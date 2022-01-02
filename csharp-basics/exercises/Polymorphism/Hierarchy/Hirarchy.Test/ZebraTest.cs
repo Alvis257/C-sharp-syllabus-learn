@@ -6,7 +6,6 @@ namespace Hirarchy.Test
     [TestClass]
     public class ZebraTest
     {
-        //Arrange
         private Zebra _target = new Zebra("Zebra", "White And Black", 160, "Wild", 0);
 
         [TestMethod]

@@ -10,7 +10,7 @@ namespace Phonebook
         {
             string name;
             string number;
-            PhoneDirectory newBook = new PhoneDirectory();
+            PhoneDictionary newBook = new PhoneDictionary();
 
             newBook.PutNumber("Bob", "28329022");
             newBook.PutNumber("Karen", "22159231");

@@ -3,7 +3,7 @@
 namespace Account.Test
 {
     [TestClass]
-    public class UnitTest1
+    public class AccountTest
     {
         private Account _target = new Account("Bill", 0);
         private Account _target2 = new Account("Alex", 100);

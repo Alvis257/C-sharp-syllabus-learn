@@ -6,10 +6,10 @@ using PhoneBook;
 namespace PhoneDictionary.Test
 {
     [TestClass]
-    public class UnitTest1
+    public class PhoneDictionaryTest
     {
         //Arrange
-        private PhoneDirectory _target = new PhoneDirectory();
+        private PhoneBook.PhoneDictionary _target = new PhoneBook.PhoneDictionary();
         private Dictionary<string, string> testDictionary = new Dictionary<string, string>();
 
         [TestMethod]
@@ -72,7 +72,7 @@ namespace PhoneDictionary.Test
         {
             //Arrange
             _target.PutNumber("Roger", "2839011");
-            string expected = null;
+            string expected = string.Empty;
             string number = "2869011";
 
             //Assert
@@ -84,7 +84,7 @@ namespace PhoneDictionary.Test
         {
             //Arrange
             _target.PutNumber("Roger", "2839011");
-            string excpeted = null;
+            string excpeted = string.Empty;
             string name = "Robert";
 
             //Assert

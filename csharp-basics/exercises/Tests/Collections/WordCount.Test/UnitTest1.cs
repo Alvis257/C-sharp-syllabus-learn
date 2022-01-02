@@ -9,7 +9,7 @@ namespace WordCount.Test
         private TextCount _target = new TextCount();
 
         [TestMethod]
-        public void Test_LineCounter_Should_Return_1()
+        public void LineCounter_Should_Return_1()
         {
             //Arrange
             string text = "sdsad dasdasd asdasd";
@@ -24,7 +24,7 @@ namespace WordCount.Test
         }
 
         [TestMethod]
-        public void Test_WordCounter_Should_Return_3()
+        public void WordCounter_Should_Return_3()
         {
             //Arrange
             string text = "sdsad dasdasd asdasd";
@@ -39,7 +39,7 @@ namespace WordCount.Test
         }
 
         [TestMethod]
-        public void Test_LetterCounter_Should_Return_20()
+        public void LetterCounter_Should_Return_20()
         {
             //Arrange
             string text = "sdsad dasdasd asdasd";
