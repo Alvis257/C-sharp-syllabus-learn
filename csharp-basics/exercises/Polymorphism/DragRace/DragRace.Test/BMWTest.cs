@@ -7,7 +7,6 @@ namespace DragRace.Test
     {
         private Car _target;
         
-
         [TestMethod]
         public void Bmw_StartEngine()
         {

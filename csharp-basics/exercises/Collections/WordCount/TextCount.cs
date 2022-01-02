@@ -7,6 +7,7 @@ namespace WordCount
     public class TextCount
     {
         private int _counter = 0;
+
         public int LineCounter(List<string> textList)
         {
             _counter = 0;
@@ -16,6 +17,7 @@ namespace WordCount
 
             return _counter;
         }
+
         public int WordCounter(List<string> textList)
         {
             _counter = 0;
@@ -30,6 +32,7 @@ namespace WordCount
 
             return _counter;
         }
+
         public int LetterCounter(List<string> textList)
         {
             _counter = 0;

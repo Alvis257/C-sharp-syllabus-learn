@@ -6,7 +6,6 @@ namespace Hirarchy.Test
     [TestClass]
     public class TigerTest
     {
-        //Arrange
         private Tiger _target = new Tiger("Tiger", "Yellow", 200, "Wild", 0);
 
         [TestMethod]

@@ -18,9 +18,9 @@ namespace PhoneDictionary.Test
             //Arrange
             _target.PutNumber("Roger", "2839011");
             testDictionary.Add("Roger", "2839011");
+            string expected = string.Join("", testDictionary);
 
             //Act
-            string expected = string.Join("", testDictionary);
             string actual = string.Join("", _target.DisplayDictionary());
 
             //Assert

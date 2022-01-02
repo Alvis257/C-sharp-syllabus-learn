@@ -25,7 +25,6 @@ namespace Hirarchy.Test
         [DataTestMethod]
         [DataRow("Meat")]
         [DataRow("Vegetable")]
-
         [TestMethod]
         public void Zebra_FoodType_Should_Be_True_When_Vegetable_And_Meat(string foodType)
         {

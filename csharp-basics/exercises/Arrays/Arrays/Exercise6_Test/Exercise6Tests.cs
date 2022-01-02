@@ -8,7 +8,7 @@ namespace Exercise6_Test
     public class Exercise6Tests
     {
         [TestMethod]
-        public void Array_And_CopyArray_Are_Equal_Before_Change()
+        public void PutInArrayRandomNumbers_Array_And_CopyArray_Are_Equal_Before_Change()
         {
             //Arrange
             int[] array = new int[20];
@@ -19,9 +19,7 @@ namespace Exercise6_Test
             ArrayChange.PutInArrayRandomNumbers(random, array, copyArray);
 
             //Assert
-            for (int i = 0; i < array.Length; i++)
-                Assert.AreEqual(array[i], copyArray[i]);
-            
+            CollectionAssert.AreEqual(array, copyArray);
         }
 
         [TestMethod]

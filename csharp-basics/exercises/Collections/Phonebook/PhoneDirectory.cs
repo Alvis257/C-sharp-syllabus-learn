@@ -23,7 +23,7 @@ namespace PhoneBook
                 }
             }
 
-            return null;
+            return string.Empty;
         }
 
         public string GetNumber(string name)
@@ -33,12 +33,12 @@ namespace PhoneBook
                 return _data[name];
             }
 
-            return null;
+            return string.Empty;
         }
 
         public void PutNumber(string name, string number)
         {
-            if (name == null || number == null)
+            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(number))
             {
                 throw new Exception("name and number cannot be null");
             }
