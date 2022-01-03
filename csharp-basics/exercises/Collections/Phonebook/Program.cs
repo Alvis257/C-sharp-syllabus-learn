@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using PhoneBook;
 
 namespace Phonebook
@@ -9,15 +10,15 @@ namespace Phonebook
         {
             string name;
             string number;
-            PhoneDirectory newBook = new PhoneDirectory();
+            PhoneDictionary newBook = new PhoneDictionary();
 
             newBook.PutNumber("Bob", "28329022");
             newBook.PutNumber("Karen", "22159231");
-
             Console.WriteLine("Enter name:");
             name = Console.ReadLine();
             Console.WriteLine("Enter phone number:");
             number = Console.ReadLine();
+
             newBook.PutNumber(name, number);
 
             Console.WriteLine();
@@ -25,7 +26,11 @@ namespace Phonebook
             Console.WriteLine("Find name: Karen, number: " + newBook.GetNumber("Karen"));
             Console.WriteLine();
 
-            newBook.DisplayDictionary();
+            var phoneBook = new Dictionary<string, string>();
+            phoneBook = newBook.DisplayDictionary();
+
+            Console.WriteLine("Phones numbers:");
+            Console.WriteLine(string.Join("\n", phoneBook));
             Console.ReadKey();
         }
     }

@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace PhoneBook
 {
-    public class PhoneDirectory
+    public class PhoneDictionary
     {
         private Dictionary<string, string> _data = new Dictionary<string, string>();
         private string _name;
@@ -22,7 +23,7 @@ namespace PhoneBook
                 }
             }
 
-            return null;
+            return string.Empty;
         }
 
         public string GetNumber(string name)
@@ -32,12 +33,12 @@ namespace PhoneBook
                 return _data[name];
             }
 
-            return null;
+            return string.Empty;
         }
 
         public void PutNumber(string name, string number)
         {
-            if (name == null || number == null)
+            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(number))
             {
                 throw new Exception("name and number cannot be null");
             }
@@ -45,14 +46,18 @@ namespace PhoneBook
             _data.Add(name, number);
         }
 
-        public void DisplayDictionary()
+        public Dictionary<string, string> DisplayDictionary()
         {
-            Console.WriteLine("Phones numbers:");
+            var newPhoneBook = new Dictionary<string, string>();
+            int index = 0;
 
             foreach (var phoneBook in _data)
             {
-                Console.WriteLine(phoneBook);
+                newPhoneBook.Add(phoneBook.Key, phoneBook.Value);
+                index++;
             }
+
+            return newPhoneBook.Any() ? newPhoneBook : throw new Exception("Doesn't Contain Phone Number");
         }
     }
 }

@@ -1,27 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Exercise5
+﻿namespace Exercise5
 {
-    class Date
+    public class Date
     {
-        private int a_month { get; set; }
-        private int a_day{ get; set; }
-        private int a_year { get; set; }
+        private int _month;
+        private int _day;
+        private int _year;
 
-        public Date( int day,int month,int year)
+        public Date(int day, int month, int year)
         {
-            a_month = month;
-            a_day = day;
-            a_year = year;
+            _month = month;
+            _day = day;
+            _year = year;
         }
 
         public string DisplayDate()
         {
-            return $"{a_month}/{a_day}/{a_year}";
+            return $"{_month}/{_day}/{_year}";
         }
     }
 }

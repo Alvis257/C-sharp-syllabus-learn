@@ -1,0 +1,11 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=bfc78d83_002D945f_002D4c1c_002D988a_002D890312d8605e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="UnitTest1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;MSTest::6F23FCFB-93B5-4AC7-821A-A66128D06864::.NETFramework,Version=v4.7.2::DragRace.Test.BMWTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::6F23FCFB-93B5-4AC7-821A-A66128D06864::.NETFramework,Version=v4.7.2::DragRace.Test.LexusTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::6F23FCFB-93B5-4AC7-821A-A66128D06864::.NETFramework,Version=v4.7.2::DragRace.Test.MazdaTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::6F23FCFB-93B5-4AC7-821A-A66128D06864::.NETFramework,Version=v4.7.2::DragRace.Test.PorcheTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::6F23FCFB-93B5-4AC7-821A-A66128D06864::.NETFramework,Version=v4.7.2::DragRace.Test.Teslatest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::6F23FCFB-93B5-4AC7-821A-A66128D06864::.NETFramework,Version=v4.7.2::DragRace.Test.TeslaTest&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
